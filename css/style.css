@@ -33,8 +33,8 @@ nav {
 }
 .content {
   background-color: #fff;
-  margin-left: 300pt;
-  margin-right: 300pt;
+  margin-left: 10%;
+  margin-right: 10%;
   margin-top: 50px;
   margin-bottom: 50px;
   padding: 20px;
@@ -46,7 +46,7 @@ nav {
 }
 
 .content img {
-  width: calc(200% + 20px);
+  width: 100%;
   border-radius: 10px;
 }
 .menu {
@@ -152,7 +152,7 @@ nav {
 .sidebar {
   display: flex;
   flex-direction: column;
-  margin-left: 50px;
+  margin-left: 10%;
 }
 .bigtitle {
   font-family: 'SFPro', Arial, sans-serif;
@@ -170,4 +170,47 @@ nav {
   height: auto;
   object-fit: cover;
   border-radius: 10px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  /* Adjust styles for screens up to 768px wide */
+  .content {
+    grid-template-columns: 1fr; /* Single column */
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  
+  .logo img {
+    margin-left: 20px;
+  }
+  
+  .sidebar {
+    margin-left: 5%;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Adjust styles for screens up to 480px wide */
+  .logo img {
+    width: 120px;
+    height: 40px;
+  }
+  
+  .menu li a {
+    font-size: 18px;
+  }
+  
+  .bigtitle {
+    font-size: 30px;
+  }
+  
+  .content {
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  
+  .sidebar {
+    margin-left: 2%;
+  }
 }
